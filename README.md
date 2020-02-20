@@ -28,5 +28,6 @@ docker                docker
 
 ```
 
-- custom image: have a lot of restrictions in terms of bash. The idea is control what a user can do or can't. If we take a look at *Dockerfile* and how the image is created , we will see that we hide some commands, and we give priority over the *kubectl-x* command.
+- custom image: 
+have a lot of restrictions in terms of bash. The idea is control what a user can do or can't. If we take a look at **Dockerfile** and how the image is created , we will see that we hide some commands, and we give priority over the **kubectl-x** command.
 
