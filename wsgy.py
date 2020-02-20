@@ -2,7 +2,7 @@ import os , socket, random
 from flask import Flask,redirect
 
 app = Flask(__name__)
-public_ip = '161.156.106.180'
+public_ip = 'DEFINE A PUBLIC IP HERE'
 
 def get_port():
     start_port = random.randint(8080,8500)
