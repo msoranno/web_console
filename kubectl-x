@@ -1,0 +1,23 @@
+#!/bin/bash
+
+cmd="${@:2}"
+kubeDir="/.kube"
+
+if [ "$1" == "list" ]; then
+	here=$(pwd)
+	cd $kubeDir
+	ls -lart *.kubeconfig
+	cd $here
+else
+   #RBAC JAJAJ
+   if [[ "$cmd" == *config*view* ]]; then
+      echo
+      echo "config view not allowed"
+      echo
+      exit 1
+   fi
+   export KUBECONFIG=$kubeDir/$1.kubeconfig
+   xyz $cmd
+
+fi
+
